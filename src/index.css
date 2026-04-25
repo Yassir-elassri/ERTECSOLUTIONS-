@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-blue: #020617;
+  --color-brand-blue-light: #0A1224;
+  --color-brand-orange: #F97316;
+  --color-brand-orange-hover: #EA580C;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-blue text-white overflow-x-hidden selection:bg-brand-orange/30;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.glass {
+  @apply backdrop-blur-xl bg-white/[0.03] border border-white/10;
+}
+
+.glass-dark {
+  @apply backdrop-blur-2xl bg-black/40 border border-white/5;
+}
+
+.nav-glass {
+  @apply backdrop-blur-md bg-brand-blue/30 border-b border-white/5;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/80 to-brand-orange/50 font-black;
+}
+
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+[dir="rtl"] {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}

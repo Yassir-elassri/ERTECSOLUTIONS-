@@ -1,0 +1,13 @@
+{
+  "name": "ERTEC SOLUTIONS",
+  "description": "Premium engineering and construction solutions specializing in HVAC, renewable energy, telecommunications, and IT consulting.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "multilingual support",
+    "3D hero section",
+    "RTL support",
+    "responsive design"
+  ]
+}
